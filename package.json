@@ -1,6 +1,6 @@
 {
   "name": "get-pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library get-pages description",
   "main": "lib/index.js",
   "jsnext:main": "dist/get-pages.es.js",

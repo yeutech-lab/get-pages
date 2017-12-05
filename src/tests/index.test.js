@@ -2,7 +2,7 @@ import getPages from '../index';
 
 describe('should exports', () => {
   it('should get pages', () => {
-    expect(getPages([{
+    const routes = [{
       name: 'hello',
       path: '/hello',
       childRoutes: [{
@@ -28,7 +28,9 @@ describe('should exports', () => {
           }],
         }],
       }],
-    }])).toEqual({
+    }];
+    const routesCopy = [...routes];
+    expect(getPages(routes)).toEqual({
       bye: {
         childRoutes: [{
           childRoutes: [{
@@ -106,5 +108,6 @@ describe('should exports', () => {
         },
       },
     });
+    expect(routes).toEqual(routesCopy);
   });
 });

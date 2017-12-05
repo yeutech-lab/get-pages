@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v0.0.3] - 2017-11-??
+## [v0.0.3] - 2017-12-06
 
-- TODO: write changelog before preparing next tag
+- Fix route getting modified
 
 ## [v0.0.2] - 2017-11-29
 

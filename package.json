@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@module.kopaxgroup.com:20024/api-front/get-pages.git"
+    "url": "https://module.kopaxgroup.com/api-front/get-pages.git"
   },
   "bugs": {
     "url": "https://module.kopaxgroup.com/api-front/get-pages/issues"

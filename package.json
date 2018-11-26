@@ -263,24 +263,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "transitive": {
-    "name": "get-pages",
-    "scope": "yeutech-lab",
-    "scopedName": "@yeutech-lab/get-pages",
-    "jsnext:main": "dist/@yeutech-lab/get-pages.es.js",
-    "module": "dist/@yeutech-lab/get-pages.es.js",
-    "homepage": "https://yeutech-lab.github.io/get-pages",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/get-pages.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/get-pages/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
   }
 }

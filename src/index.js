@@ -1,14 +1,12 @@
-/* eslint-disable no-shadow, no-param-reassign, no-unused-expressions */
-export default function getPages(routes, pages = {}) {
-  const copy = [...routes];
+export default function getPages(routeConfig, pages = {}) {
+  const copy = [...routeConfig];
   function addRoutes(routes, parent) {
     const innerCopy = [...routes];
     innerCopy.forEach((route) => {
-      parent[route.name] = route;
-      route.childRoutes && addRoutes(route.childRoutes, route);
+      parent[route.name] = route; // eslint-disable-line no-param-reassign
+      route.childRoutes && addRoutes(route.childRoutes, route); // eslint-disable-line no-unused-expressions
     });
   }
   addRoutes(copy, pages);
   return pages;
 }
-/* eslint-enable no-shadow, no-param-reassign, no-unused-expressions */

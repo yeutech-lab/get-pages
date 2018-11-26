@@ -8,39 +8,3 @@
 
 $PACKAGE_DESCRIPTION.
 
-```bash
-npm install --save theme-customizer
-```
-
-## Setting-up
-
-### Reducer
-Import the *reducer* and the *store ID* from the `theme-customizer` package.
-
-```jsx static
-import themeCustomizerReducer from 'theme-customizer/lib/reducer';
-import { STORE_ID as THEME_CUSTOMIZER_STORE_ID } from 'theme-customizer/lib/constants';
-```
-
-Add it to your application's reducer:
-
-```jsx static
-export default function createReducer(asyncReducers) {
-  return combineReducers({
-    [THEME_CUSTOMIZER_STORE_ID]: themeCustomizerReducer,
-    ...asyncReducers,
-  });
-}
-```
-
-If you are using the Bootstrap Styled theme by default, you don't have to add the *theme* to your reducer as it is set by default.
-However, if you are using a customized theme or, themes from other modules, you **MUST** add your theme to the `reducer`.
-
-```jsx static
-import theme from 'theme';
-...
-  return combineReducers({
-    [THEME_CUSTOMIZER_STORE_ID]: themeCustomizerReducer(theme),
-    ...asyncReducers,
-  });
-```

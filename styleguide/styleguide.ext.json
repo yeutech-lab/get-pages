@@ -1,0 +1,30 @@
+{
+  "ignore": [
+    "**/__tests__/**",
+    "**/*.test.{js,jsx,ts,tsx}",
+    "**/*.spec.{js,jsx,ts,tsx}",
+    "**/*.d.ts"
+  ],
+  "sections": [
+    {
+      "name": "Introduction",
+      "content": "docs/introduction.md"
+    },
+    {
+      "name": "Installation",
+      "content": "docs/installation.md"
+    },
+    {
+      "name": "Why",
+      "content": "docs/why.md"
+    },
+    {
+      "name": "How it work",
+      "content": "docs/how-it-work.md"
+    }
+  ],
+  "ribbon": {
+    "url": "https://module.kopaxgroup.com/api-front/get-pages",
+    "text": "Fork us on GitLab"
+  }
+}

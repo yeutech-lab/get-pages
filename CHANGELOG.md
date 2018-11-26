@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/yeutech-lab/get-pages/compare/v1.0.1...v1.0.2) (2018-11-26)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/yeutech-lab/get-pages ([2300890](https://github.com/yeutech-lab/get-pages/commit/2300890))
+
 ## [1.0.1](https://module.kopaxgroup.com/api-front/get-pages/compare/v1.0.0...v1.0.1) (2018-11-26)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@yeutech/get-pages",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "get-pages is an utility that transform the routes.config.js configuration of your react-router.",
   "main": "lib/index.js",
   "jsnext:main": "dist/@yeutech/get-pages.es.js",

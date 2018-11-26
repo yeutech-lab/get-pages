@@ -7,22 +7,57 @@ It will return an object construct of `{ [route.name]: route }`.
 
 This is how you would access a specific page in your routes array:
 
-```jsx
+```js static
+const routes = [
+  {
+    name: 'dashboard',
+    redirect: true,
+    from: '/dashboard',
+    to: '/',
+    description: 'Dashboard',
+    childRoutes: [
+      {
+        name: 'users',
+        path: '/users',
+        description: 'List users',
+      },
+    ],
+  }
+];
 const page = routes.filter((route) => route.name === 'dashboard')[0]
 ```
 
 This is how you do with `get-pages`:
 
-```jsx
-import getPages from 'get-pages';
+```js
+const getPages = require('@yeutech-lab/get-pages');
+const routes = [
+  {
+    name: 'dashboard',
+    redirect: true,
+    from: '/dashboard',
+    to: '/',
+    description: 'Dashboard',
+    childRoutes: [
+      {
+        name: 'users',
+        path: '/users',
+        description: 'List users',
+      },
+    ],
+  }
+];
 const pages = getPages(routes);
-const page = page.dashboard;
+<ul>
+  <li>{pages.dashboard.description}: {pages.dashboard.from}</li>
+  <li>{pages.dashboard.users.description}: {pages.dashboard.users.path}</li>
+</ul>
 ```
 
-Example: 
+This is how we tested it.
 
-```jsx
-import getPages from '../index';
+```js static
+import getPages from '$PACKAGE_NAME';
 
 describe('should exports', () => {
   it('should get pages', () => {

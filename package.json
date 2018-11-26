@@ -75,6 +75,14 @@
         2,
         "always-multiline"
       ],
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "mjs": "never"
+        }
+      ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -96,7 +104,18 @@
       "no-use-before-define": 0,
       "prefer-template": 2,
       "class-methods-use-this": 0,
-      "require-yield": 0
+      "require-yield": 0,
+      "no-await-in-loop": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".mjs"
+          ]
+        }
+      }
     }
   },
   "devDependencies": {

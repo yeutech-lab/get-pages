@@ -1,6 +1,6 @@
 {
   "name": "@yeutech/get-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "get-pages is an utility that transform the routes.config.js configuration of your react-router.",
   "main": "lib/index.js",
   "jsnext:main": "dist/@yeutech/get-pages.es.js",
@@ -32,7 +32,8 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/get-pages is deprecated, use @yeutech-lab/get-pages instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",

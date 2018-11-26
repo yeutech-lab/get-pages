@@ -1,11 +1,11 @@
 {
-  "name": "@yeutech/get-pages",
+  "name": "@yeutech-lab/get-pages",
   "version": "1.0.1",
   "description": "get-pages is an utility that transform the routes.config.js configuration of your react-router.",
   "main": "lib/index.js",
-  "jsnext:main": "dist/@yeutech/get-pages.es.js",
-  "module": "dist/@yeutech/get-pages.es.js",
-  "homepage": "https://api-front.yeutech.com/get-pages",
+  "jsnext:main": "dist/@yeutech-lab/get-pages.es.js",
+  "module": "dist/@yeutech-lab/get-pages.es.js",
+  "homepage": "https://yeutech-lab.github.io/get-pages",
   "engines": {
     "node": ">=8"
   },
@@ -32,15 +32,14 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/get-pages is deprecated, use @yeutech-lab/get-pages instead.')\" || exit 0"
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/api-front/get-pages.git"
+    "url": "https://github.com/yeutech-lab/get-pages.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/api-front/get-pages/issues"
+    "url": "https://github.com/yeutech-lab/get-pages/issues"
   },
   "keywords": [
     "get-pages",
@@ -132,9 +131,8 @@
     "@babel/plugin-transform-modules-commonjs": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@semantic-release/changelog": "^3.0.1",
-    "@semantic-release/exec": "^3.3.0",
     "@semantic-release/git": "^7.0.5",
-    "@semantic-release/gitlab": "^3.0.5",
+    "@semantic-release/github": "^5.2.5",
     "@semantic-release/npm": "^5.1.1",
     "@yeutech-lab/rollup-umd-documentation": "^2.4.5",
     "babel-core": "^7.0.0-bridge.0",
@@ -209,32 +207,20 @@
   "dependencies": {},
   "peerDependencies": {},
   "publishConfig": {
-    "registry": "https://npm.kopaxgroup.com",
-    "tag": "latest"
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest",
+    "access": "public"
   },
   "release": {
     "branch": "master",
-    "success": false,
-    "fail": false,
     "npmPublish": true,
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      }
+      "@semantic-release/github"
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -251,37 +237,55 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "package.json"
+          },
+          {
+            "path": "LICENSE.md"
+          },
+          {
+            "path": "CHANGELOG.md"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "dist/*.esm.js",
+            "label": "ES module"
+          },
+          {
+            "path": "dist/*.esm.js.map",
+            "label": "ES module source map"
+          },
+          {
+            "path": "dist/*.min.js",
+            "label": "UMD compressed"
+          },
+          {
+            "path": "dist/*.min.js.map",
+            "label": "UMD compressed source map"
+          },
+          {
+            "path": "dist/*.cjs.min.js",
+            "label": "CJS compressed"
+          },
+          {
+            "path": "dist/*.cjs.min.js.map",
+            "label": "CJS compressed source map"
+          },
+          {
+            "path": "lib/*.js",
+            "label": "CJS folder"
+          }
+        ]
       }
     ]
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "transitive": {
-    "name": "get-pages",
-    "scope": "yeutech-lab",
-    "scopedName": "@yeutech-lab/get-pages",
-    "jsnext:main": "dist/@yeutech-lab/get-pages.es.js",
-    "module": "dist/@yeutech-lab/get-pages.es.js",
-    "homepage": "https://yeutech-lab.github.io/get-pages",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/get-pages.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/get-pages/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
     }
   }
 }

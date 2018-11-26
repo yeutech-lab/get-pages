@@ -24,7 +24,7 @@
     }
   ],
   "ribbon": {
-    "url": "https://module.kopaxgroup.com/api-front/get-pages",
-    "text": "Fork us on GitLab"
+    "url": "",
+    "text": "Fork us on GitHub"
   }
 }

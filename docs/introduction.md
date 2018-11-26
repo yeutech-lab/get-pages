@@ -1,10 +1,3 @@
-[![build status]($CI_PROJECT_URL/badges/$PACKAGE_VERSION/build.svg)]($CI_PROJECT_URL/commits/$PACKAGE_VERSION)
-[![coverage report]($CI_PROJECT_URL/badges/$PACKAGE_VERSION/coverage.svg)]($CI_PROJECT_URL/commits/$PACKAGE_VERSION)
+[![Build Status](https://travis-ci.org/yeutech-lab/get-pages.svg?branch=master)](https://travis-ci.org/yeutech-lab/get-pages) [![npm Version](https://img.shields.io/npm/v/@yeutech-lab/get-pages.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/get-pages) [![License](https://img.shields.io/npm/l/@yeutech-lab/get-pages.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/get-pages) [![npm Version](https://img.shields.io/node/v/@yeutech-lab/get-pages.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/get-pages) [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/get-pages)
 
-![image](https://img.shields.io/badge/version-$PACKAGE_VERSION-green.svg)
-![image](https://img.shields.io/badge/node-$NODE_VERSION-brightgreen.svg)
-![image](https://img.shields.io/badge/npm-$NPM_VERSION-red.svg)
-![image]($IMG_SHIELD_PUBLISHING)
-
-$PACKAGE_DESCRIPTION.
-
+get-pages is an utility that transform the routes.config.js configuration of your react-router.
